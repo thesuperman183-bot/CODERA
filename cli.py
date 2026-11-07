@@ -187,8 +187,8 @@ def _read_input(arg: str) -> str:
 
 def make_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="review-agent",
-        description="AI-powered Code Review Agent CLI with Neon & Hindsight Integration",
+        prog="codera",
+        description="CODERA: AI-powered Code Review Agent CLI with Neon & Hindsight Integration",
     )
     parser.add_argument(
         "--api-url",
@@ -291,7 +291,7 @@ def _cmd_logout(_args: argparse.Namespace) -> int:
 def _cmd_whoami(args: argparse.Namespace) -> int:
     token = _resolve_token(args)
     if not token:
-        print("Not authenticated. Run 'review-agent login' first.", file=sys.stderr)
+        print("Not authenticated. Run 'codera login' first.", file=sys.stderr)
         return 1
 
     try:
@@ -351,7 +351,7 @@ def _cmd_learn(args: argparse.Namespace) -> int:
 def _cmd_history(args: argparse.Namespace) -> int:
     token = _resolve_token(args)
     if not token:
-        print("Not authenticated. Run 'review-agent login' first.", file=sys.stderr)
+        print("Not authenticated. Run 'codera login' first.", file=sys.stderr)
         return 1
 
     try:

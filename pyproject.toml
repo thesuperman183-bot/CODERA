@@ -23,7 +23,7 @@ dependencies = [
 ]
 
 [project.scripts]
-review-agent = "cli:main"
+codera = "cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
